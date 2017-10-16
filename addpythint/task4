@@ -1,0 +1,13 @@
+word=input("введите слово: ")
+encr=""
+z="с"
+con="бвгджзйклмнпрстфхцчшщъь"
+vow="аеёиоуыэюя"
+for a in word:
+    for c in con:
+        if c==a:
+            encr+=a
+    for v in vow:
+        if v==a:
+            encr+=a+z+a
+print(encr)
