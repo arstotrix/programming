@@ -1,0 +1,22 @@
+word=input("insert a word in cyrillic letters ")
+encr=""
+cl=""
+z="ay"
+i=0
+con="bcdfghjklmnpqrstvwxz"
+vow="aeiouy"
+for c in con:
+    if c==word[0]:
+        i+=1
+    if c==word[1]:
+        i+=1
+for v in vow:
+    if v==word[0]:
+        i+=3
+if i==1:
+    encr=word[1::]+word[0]+z
+elif i==2:
+    encr=word[2::]+word[:2]+z
+else:
+    encr=encr+word+"w"+z
+print(encr)
