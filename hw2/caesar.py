@@ -1,6 +1,6 @@
 caesar="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 word=input("insert a word: ")
-i=int(input("insert a number from 1 to 32 inclusively: "))
+i=int(input("insert a number from 1 to 25 inclusively: "))
 encr=""
 y=0
 for a in word:
