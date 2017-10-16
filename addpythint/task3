@@ -1,6 +1,5 @@
 word=input("insert a word in cyrillic letters ")
 encr=""
-cl=""
 z="ay"
 i=0
 con="bcdfghjklmnpqrstvwxz"
