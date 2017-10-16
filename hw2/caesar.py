@@ -1,5 +1,4 @@
 caesar="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
-print("this thing works with cyrillic letters only. sorry about that :D")
 word=input("insert a word: ")
 i=int(input("insert a number from 1 to 32 inclusively: "))
 encr=""
