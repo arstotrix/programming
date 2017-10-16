@@ -1,4 +1,4 @@
-word=input("insert a word in cyrillic letters ")
+word=input("insert a word")
 encr=""
 z="ay"
 i=0
