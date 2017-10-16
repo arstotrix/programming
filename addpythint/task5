@@ -1,0 +1,13 @@
+word=input("insert a word: ")
+encr=""
+z="aig"
+con="bcdfghjklmnpqrstvwxz"
+vow="aeiouy"
+for a in word:
+    for c in con:
+        if c==a:
+            encr+=(a+z)
+    for v in vow:
+        if v==a:
+            encr+=a
+print(encr)
