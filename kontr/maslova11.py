@@ -1,4 +1,4 @@
-i=0
+i = 0
 with open ("quotes.txt", encoding="utf-8") as f:
     text = f.read()
     lines = text.split('\n')
