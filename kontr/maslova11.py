@@ -4,8 +4,8 @@ with open ("quotes.txt", encoding="utf-8") as f:
     lines = text.split('\n')
     #print(lines)
     for line in lines:
-        parts=line.split(". —" )
-        words=parts[0].split()
+        parts = line.split(". —" )
+        words = parts[0].split()
         #print(len(words[0]))
         for word in words:
             if word != "—":
