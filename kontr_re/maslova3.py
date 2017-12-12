@@ -11,7 +11,7 @@ while (user_lng != ""):
                 #похоже, там были повторяющиеся языки
                 #поэтому я поставила проверку
                 if i == 0:
-                    print(pieces[0]+" "+pieces[1]+" "+pieces[2])
+                    print(pieces[0]+" - "+pieces[1]+" - "+pieces[2])
                     i += 1
     if i == 0:
         #если вводилось пустое слово, он сначала выводил non existent data
