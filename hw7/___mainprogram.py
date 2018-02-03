@@ -30,7 +30,8 @@ def searching(ing,dict):
 
 def main():
     dict={}
-    words = getfile('textfile.txt')
+    f = input('input a filename')
+    words = getfile(f)
     print(words)
     print(search(words, dict))
     ing = input("input an - ing form please: ")
