@@ -2,19 +2,10 @@ def getfile(filename):
     with open (filename, encoding = "utf-8") as f:
         text = f.read()
         words = text.split()
-        puncts = """.,?!:;—""«»„“()"""
-        print(puncts)
-        for word in words:
-            for p in puncts:
-                #print(p)
-                if word[-1] == p:
-                    print(p)
-                    word.replace(word[-1], '')
-                    print(word)
-                if word[0] == p:
-                    word.replace(word[0], '')
-                #print(word)
-                      
+        puncts = """.,?!:;—""«»„“()<>"""
+        #print(puncts)
+        for i, word in enumerate(words):
+            words[i] = word.strip(puncts)
         return words  
 def search(words,dict):
     i = 0
@@ -41,7 +32,7 @@ def main():
         print("Sorry, try again")
     else:
         words = getfile(f)
-        print(words)
+        #print(words)
         print(search(words, dict))
         ing = input("input an - ing form please: ")
         if ing == '':
