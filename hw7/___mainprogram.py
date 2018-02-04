@@ -3,12 +3,18 @@ def getfile(filename):
         text = f.read()
         words = text.split()
         puncts = """.,?!:;—""«»„“()"""
+        print(puncts)
         for word in words:
             for p in puncts:
+                #print(p)
                 if word[-1] == p:
-                    word.replace(p, '')
-                elif word[0] == p:
-                    word.replace(p, '')
+                    print(p)
+                    word.replace(word[-1], '')
+                    print(word)
+                if word[0] == p:
+                    word.replace(word[0], '')
+                #print(word)
+                      
         return words  
 def search(words,dict):
     i = 0
@@ -30,12 +36,18 @@ def searching(ing,dict):
 
 def main():
     dict={}
-    f = input('input a filename')
-    words = getfile(f)
-    print(words)
-    print(search(words, dict))
-    ing = input("input an - ing form please: ")
-    print(searching(ing,dict))
+    f = input('input a filename: ')
+    if f == "":
+        print("Sorry, try again")
+    else:
+        words = getfile(f)
+        print(words)
+        print(search(words, dict))
+        ing = input("input an - ing form please: ")
+        if ing == '':
+            print('Sorry, try again')
+        else:
+            print(searching(ing,dict))
 
 if __name__ == "__main__":
     main()
