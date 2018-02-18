@@ -15,6 +15,7 @@ def dictionarize(text, dict):
         hintlist.append(boom)
     dict[keyword] = hintlist    
     return dict
+
 def playgame(dict, n):
     a = ''
     for i in range (0, len(n)):
