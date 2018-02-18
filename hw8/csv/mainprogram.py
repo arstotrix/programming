@@ -8,17 +8,13 @@ def openfile(filename):
     return words
 
 def dictionarize(text, dict):
-    hintlist = []
-    keyword = ''
     for t in text:
         words = t.split('\t')
         #print(words)
-        keyword = words[0]
-        #print (keyword)
-        for w in words:
-            w += " ..."
+        #for w in words:
+            #w += " ..."
             #print(w)
-        dict[keyword] = words[1:]
+        dict[words[0]] = words[1:]
     #print(dict)
     return dict
 
