@@ -39,23 +39,19 @@ def topper(count):
     return b, a
 
 def stats(file):
-    a, b, c = sort(openfile(file))
-    d, e = topper(c)
-    a = 'количество различных слов в песне: ' + str(a)
-    b = 'общее количество слов в песне: ' + str(b)
-    d = 'самое частотное слово в песне: ' + str(d)
-    e = 'оно было употреблено ' + str(e) + ' раз'
-    return a, b, d, e
+    a, b, z = sort(openfile(file))
+    c, d = topper(c)
+    return a, b, c, d
 
 def main():
     r = input('введите название песни: ')
     while r != '' :
         a, b, c, d = stats(r+'.txt')
         print('вот статистика по количеству и частотности слов в данной песне:')
-        print(a)
-        print(b)
-        print(c)
-        print(d)
+        print('количество различных слов в песне: ', a)
+        print('общее количество слов в песне: ', b)
+        print('самое частотное слово в песне: ', c)
+        print('оно было употреблено ', d, ' раз')
         r = input('введите название песни: ')
     
 if __name__ == "__main__":
