@@ -4,7 +4,7 @@ base = []
 
 def openfile(a):
     with open (a, encoding = "utf-8") as f:
-        text = f.read()
+        text = f.read().lower()
     return text
 
 def database(words):
