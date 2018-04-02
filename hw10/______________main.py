@@ -7,13 +7,11 @@ def openfile(a):
         text = f.read()
     return text
 
-def finder(w):
-    match = re.search('title="Столица"(.*?)title="(.*?)"', w, flags=re.DOTALL)
-    print(match.group(2))
+def finder(words):
+    
+    return a
      
 def main():
-   finder(openfile('canada.html'))
+   finder(openfile(''))
 if __name__ == "__main__":
     main()
-
-    
