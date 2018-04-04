@@ -11,12 +11,12 @@ def is_palindrome(line):
         if pal[i] != pal[len(pal)-1-i]:
             res = False
             break
-    print(res)
+    return res
 
 #я не знаю, необходима ли эта часть, но пусть будет
     
 def main():
-    is_palindrome(input('Введите фразу: '))
+    print(is_palindrome(input('Введите фразу: ')))
     
 if __name__ == '__main__':
     main()
