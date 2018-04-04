@@ -6,11 +6,11 @@ def openfile(a):
     return text
 
 def replacer(w):
-    match = re.search('комар\d{0,3}', w).group()
+    match = re.search('комар\w{0,3}?\W', w).group()
     print(match)
      
 def main():
-   replacer(openfile('komar.html'))
+   replacer((openfile('komar.html')[:1000]))
 if __name__ == "__main__":
     main()
 

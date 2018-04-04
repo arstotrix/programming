@@ -6,9 +6,10 @@ def openfile(a):
     return text
 
 def replacer(w):
-    match = re.search('комар\d{0,3}', w).group()
-    print(match)
-     
+    return
+
+def filewrite(a,b):
+    return b
 def main():
    replacer(openfile('komar.html'))
 if __name__ == "__main__":
