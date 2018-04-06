@@ -6,11 +6,13 @@ def openfile(a):
     return text
 
 def finder(w):
-    match = re.search('комар\w{0,3}?\W', w).group()
+    match = re.findall('комар\w{0,3}?\W', w)
+    mmatch = re.findall('Комар\w{0,3}?\W', w)
     print(match)
+    print(mmatch)
      
 def main():
-   replacer((openfile('komar.html')[:1000]))
+   finder((openfile('komar.html')))
 if __name__ == "__main__":
     main()
 
