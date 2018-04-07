@@ -10,10 +10,10 @@ def replacer(w):
     mmatch = re.sub('Комар(\w{0,3}?\W)','Слон\1' , w)
     return mmatch
 def filewrite(b, a):
-    with open (a, encoding = "utf-8") as f:
+    with open (b, encoding = "utf-8") as f:
         f.write(b)
 def main():
-   filewrite(replacer(openfile('komar.html')), 'slon.html')
+   filewrite(replacer(openfile('komar.txt')), 'slon.txt')
 if __name__ == "__main__":
     main()
 
