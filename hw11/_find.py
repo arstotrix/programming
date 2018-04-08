@@ -12,7 +12,8 @@ def finder(w):
     print(mmatch)
      
 def main():
-   finder((openfile('komar.html')))
+   print(finder(openfile('komar.txt')))
+   
 if __name__ == "__main__":
     main()
 

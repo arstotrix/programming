@@ -6,12 +6,12 @@ def openfile(a):
     return text
 
 def replacer(w):
-    match = re.sub('комар(\w{0,3}?\W)','слон\1' , w)
-    mmatch = re.sub('Комар(\w{0,3}?\W)','Слон\1' , w)
-    print(mmatch)
+    match = re.sub('комар(\w{0,3}?\W)','слон\\1' , w)
+    mmatch = re.sub('Комар(\w{0,3}?\W)','Слон\\1' , match)
+    return mmatch
      
 def main():
-   replacer(openfile('komar.html'))
+   print(replacer(openfile('komar.html'))[:1500]) 
 if __name__ == "__main__":
     main()
 
