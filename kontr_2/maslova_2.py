@@ -1,3 +1,4 @@
+
 import re
 dict = {}
 
@@ -22,7 +23,9 @@ def makedict(text, count):
 
 def writefile(a,b):
     with open (b, 'w', encoding = 'utf-8') as f:
-        f.write(a)
+        for i in a:
+            aaaaa = i + ' встречается ' + str(a[i]) +' раз(a)\n'
+            f.write(aaaaa)
 
 def main():
     writefile(makedict(finder(openfile("icelandic.xml")), dict),'maslova_2.txt')
