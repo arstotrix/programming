@@ -1,6 +1,5 @@
 import os
 import re
-
 i = 0
 fnames = os.listdir()
 for fname in fnames:
