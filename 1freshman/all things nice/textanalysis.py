@@ -1,3 +1,5 @@
+#это не код, а один огромный костыль, Маслова
+
 base = []
 count = {}
 
@@ -23,8 +25,7 @@ def sort(text):
         if i == 1:
             base.append(t)
         if t in count:
-            count[t] += 1
-            
+            count[t] += 1    
         else:
             count[t] = 1
             
@@ -32,6 +33,7 @@ def sort(text):
 
 def topper(count):
     a = 0
+    b = ''
     for c in count:
         if count[c] > a:
             a = count[c]
@@ -39,17 +41,19 @@ def topper(count):
     return b, a
 
 def stats(file):
+    c = ''
     a, b, z = sort(openfile(file))
-    c, d = topper(c)
-    return a, b, c, d
+    c, d = topper(z)
+    return a, b, c, d, z
 
 def main():
     r = input('введите название песни: ')
     while r != '' :
-        a, b, c, d = stats(r+'.txt')
+        a, b, c, d, z = stats(r+'.txt')
         print('вот статистика по количеству и частотности слов в данной песне:')
         print('количество различных слов в песне: ', a)
         print('общее количество слов в песне: ', b)
+        #print(z)
         print('самое частотное слово в песне: ', c)
         print('оно было употреблено ', d, ' раз')
         r = input('введите название песни: ')
